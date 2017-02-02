@@ -20,32 +20,38 @@ namespace Android.Support.CustomTabs.Shared
 		const string TAG = "KeepAliveService";
 
 		IBinder binder;
+		[Preserve(Conditional = true)]
 		public KeepAliveService()
 		{
 			var serviceClassName = Class.FromType(typeof(KeepAliveService)).CanonicalName;
 			Log.Debug(TAG, $"{serviceClassName}");
 		}
 
+		[Preserve(Conditional = true)]
 		public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
 		{
 			return StartCommandResult.NotSticky;
 		}
 
+		[Preserve(Conditional = true)]
 		public override IBinder OnBind(Intent intent)
 		{
 			binder = new KeepAliveServiceBinder(this);
 			return binder;
 		}
 
+		[Preserve(Conditional = true)]
 		public class KeepAliveServiceBinder : Binder
 		{
 			readonly KeepAliveService service;
 
+			[Preserve(Conditional = true)]
 			public KeepAliveServiceBinder(KeepAliveService service)
 			{
 				this.service = service;
 			}
 
+			[Preserve(Conditional = true)]
 			public KeepAliveService GetKeepAliveService()
 			{
 				return service;

@@ -26,9 +26,6 @@ namespace AndroidCustomTabs
 		
 		public static void UpdateIdValues()
 		{
-			global::Android.Support.CustomTabs.Shared.Resource.Animation.slide_in_right = global::AndroidCustomTabs.Resource.Animation.slide_in_right;
-			global::Android.Support.CustomTabs.Shared.Resource.Animation.slide_out_left = global::AndroidCustomTabs.Resource.Animation.slide_out_left;
-			global::Android.Support.CustomTabs.Shared.Resource.String.library_name = global::AndroidCustomTabs.Resource.String.library_name;
 		}
 		
 		public partial class Animation
@@ -63,12 +60,6 @@ namespace AndroidCustomTabs
 			
 			// aapt resource value: 0x7f050009
 			public const int abc_slide_out_top = 2131034121;
-			
-			// aapt resource value: 0x7f05000a
-			public const int slide_in_right = 2131034122;
-			
-			// aapt resource value: 0x7f05000b
-			public const int slide_out_left = 2131034123;
 			
 			static Animation()
 			{
@@ -2405,92 +2396,89 @@ namespace AndroidCustomTabs
 			// aapt resource value: 0x7f080012
 			public const int abc_toolbar_collapse_description = 2131230738;
 			
-			// aapt resource value: 0x7f080041
-			public const int action_button_toast_text = 2131230785;
-			
-			// aapt resource value: 0x7f080023
-			public const int action_create_notification = 2131230755;
+			// aapt resource value: 0x7f080040
+			public const int action_button_toast_text = 2131230784;
 			
 			// aapt resource value: 0x7f080022
-			public const int app_name = 2131230754;
-			
-			// aapt resource value: 0x7f08002b
-			public const int back_to_app = 2131230763;
-			
-			// aapt resource value: 0x7f08002a
-			public const int default_test_url = 2131230762;
-			
-			// aapt resource value: 0x7f080031
-			public const int default_toolbar_color = 2131230769;
-			
-			// aapt resource value: 0x7f080038
-			public const int description_activity_customized_chrome_tab = 2131230776;
-			
-			// aapt resource value: 0x7f08003a
-			public const int description_activity_notification = 2131230778;
-			
-			// aapt resource value: 0x7f080039
-			public const int description_activity_service_connection = 2131230777;
-			
-			// aapt resource value: 0x7f080037
-			public const int description_activity_simple_chrome_tab = 2131230775;
-			
-			// aapt resource value: 0x7f08002f
-			public const int label_action = 2131230767;
-			
-			// aapt resource value: 0x7f08002e
-			public const int label_add_action_button = 2131230766;
-			
-			// aapt resource value: 0x7f08003e
-			public const int label_add_default_share = 2131230782;
-			
-			// aapt resource value: 0x7f08002d
-			public const int label_add_menus = 2131230765;
-			
-			// aapt resource value: 0x7f080040
-			public const int label_add_toolbar_item = 2131230784;
-			
-			// aapt resource value: 0x7f08003d
-			public const int label_auto_hide_appbar = 2131230781;
-			
-			// aapt resource value: 0x7f08003b
-			public const int label_custom_back_button = 2131230779;
-			
-			// aapt resource value: 0x7f080033
-			public const int label_may_launch_url = 2131230771;
-			
-			// aapt resource value: 0x7f08003c
-			public const int label_show_title = 2131230780;
-			
-			// aapt resource value: 0x7f08002c
-			public const int label_start_custom_tab = 2131230764;
-			
-			// aapt resource value: 0x7f080030
-			public const int label_toobar_color = 2131230768;
-			
-			// aapt resource value: 0x7f08003f
-			public const int label_toobar_secondary_color = 2131230783;
-			
-			// aapt resource value: 0x7f080029
-			public const int label_url = 2131230761;
+			public const int action_create_notification = 2131230754;
 			
 			// aapt resource value: 0x7f080021
-			public const int library_name = 2131230753;
+			public const int app_name = 2131230753;
+			
+			// aapt resource value: 0x7f08002a
+			public const int back_to_app = 2131230762;
+			
+			// aapt resource value: 0x7f080029
+			public const int default_test_url = 2131230761;
+			
+			// aapt resource value: 0x7f080030
+			public const int default_toolbar_color = 2131230768;
+			
+			// aapt resource value: 0x7f080037
+			public const int description_activity_customized_chrome_tab = 2131230775;
+			
+			// aapt resource value: 0x7f080039
+			public const int description_activity_notification = 2131230777;
+			
+			// aapt resource value: 0x7f080038
+			public const int description_activity_service_connection = 2131230776;
+			
+			// aapt resource value: 0x7f080036
+			public const int description_activity_simple_chrome_tab = 2131230774;
+			
+			// aapt resource value: 0x7f08002e
+			public const int label_action = 2131230766;
+			
+			// aapt resource value: 0x7f08002d
+			public const int label_add_action_button = 2131230765;
+			
+			// aapt resource value: 0x7f08003d
+			public const int label_add_default_share = 2131230781;
+			
+			// aapt resource value: 0x7f08002c
+			public const int label_add_menus = 2131230764;
+			
+			// aapt resource value: 0x7f08003f
+			public const int label_add_toolbar_item = 2131230783;
+			
+			// aapt resource value: 0x7f08003c
+			public const int label_auto_hide_appbar = 2131230780;
+			
+			// aapt resource value: 0x7f08003a
+			public const int label_custom_back_button = 2131230778;
 			
 			// aapt resource value: 0x7f080032
-			public const int menu_item_title = 2131230770;
+			public const int label_may_launch_url = 2131230770;
 			
-			// aapt resource value: 0x7f080042
-			public const int menu_item_toast_text = 2131230786;
+			// aapt resource value: 0x7f08003b
+			public const int label_show_title = 2131230779;
+			
+			// aapt resource value: 0x7f08002b
+			public const int label_start_custom_tab = 2131230763;
+			
+			// aapt resource value: 0x7f08002f
+			public const int label_toobar_color = 2131230767;
+			
+			// aapt resource value: 0x7f08003e
+			public const int label_toobar_secondary_color = 2131230782;
 			
 			// aapt resource value: 0x7f080028
-			public const int notification_sample_url = 2131230760;
+			public const int label_url = 2131230760;
+			
+			// aapt resource value: 0x7f080031
+			public const int menu_item_title = 2131230769;
+			
+			// aapt resource value: 0x7f080041
+			public const int menu_item_toast_text = 2131230785;
 			
 			// aapt resource value: 0x7f080027
-			public const int notification_text = 2131230759;
+			public const int notification_sample_url = 2131230759;
 			
 			// aapt resource value: 0x7f080026
-			public const int notification_title = 2131230758;
+			public const int notification_text = 2131230758;
+			
+			// aapt resource value: 0x7f080025
+			public const int notification_title = 2131230757;
 			
 			// aapt resource value: 0x7f080013
 			public const int search_menu_title = 2131230739;
@@ -2498,26 +2486,26 @@ namespace AndroidCustomTabs
 			// aapt resource value: 0x7f080014
 			public const int status_bar_notification_info_overflow = 2131230740;
 			
+			// aapt resource value: 0x7f080034
+			public const int title_activity_customized_chrome_tab = 2131230772;
+			
+			// aapt resource value: 0x7f080023
+			public const int title_activity_notification_parent = 2131230755;
+			
 			// aapt resource value: 0x7f080035
-			public const int title_activity_customized_chrome_tab = 2131230773;
+			public const int title_activity_service_connection = 2131230773;
+			
+			// aapt resource value: 0x7f080033
+			public const int title_activity_simple_chrome_tab = 2131230771;
 			
 			// aapt resource value: 0x7f080024
-			public const int title_activity_notification_parent = 2131230756;
+			public const int title_activity_webview = 2131230756;
 			
-			// aapt resource value: 0x7f080036
-			public const int title_activity_service_connection = 2131230774;
-			
-			// aapt resource value: 0x7f080034
-			public const int title_activity_simple_chrome_tab = 2131230772;
-			
-			// aapt resource value: 0x7f080025
-			public const int title_activity_webview = 2131230757;
+			// aapt resource value: 0x7f080042
+			public const int toolbar_toast_text = 2131230786;
 			
 			// aapt resource value: 0x7f080043
-			public const int toolbar_toast_text = 2131230787;
-			
-			// aapt resource value: 0x7f080044
-			public const int unknown_toast_text = 2131230788;
+			public const int unknown_toast_text = 2131230787;
 			
 			static String()
 			{

@@ -52,12 +52,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared\CustomTabsHelper.cs" />
     <Compile Include="Shared\IServiceConnectionCallback.cs" />
     <Compile Include="Shared\KeepAliveService.cs" />
     <Compile Include="Shared\ServiceConnection.cs" />
     <Compile Include="Shared\LogImportance.cs" />
+    <Compile Include="..\CommonAssemblyInfo.cs">
+      <Link>Properties\CommonAssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="PreserveAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

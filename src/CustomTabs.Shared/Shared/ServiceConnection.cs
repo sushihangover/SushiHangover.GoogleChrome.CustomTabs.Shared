@@ -11,11 +11,13 @@ namespace Android.Support.CustomTabs.Shared
 		// A weak reference to the ServiceConnectionCallback to avoid leaking it.
 		readonly WeakReference<IServiceConnectionCallback> mConnectionCallback;
 
+		[Preserve(Conditional = true)]
 		public ServiceConnection(IServiceConnectionCallback connectionCallback)
 		{
 			mConnectionCallback = new WeakReference<IServiceConnectionCallback>(connectionCallback);
 		}
 
+		[Preserve(Conditional = true)]
 		public override void OnCustomTabsServiceConnected(ComponentName name, CustomTabsClient client)
 		{
 			IServiceConnectionCallback connectionCallback;
@@ -23,6 +25,7 @@ namespace Android.Support.CustomTabs.Shared
 				connectionCallback?.OnServiceConnected(client);
 		}
 
+		[Preserve(Conditional = true)]
 		public override void OnServiceDisconnected(ComponentName name)
 		{
 			IServiceConnectionCallback connectionCallback;

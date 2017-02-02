@@ -26,7 +26,14 @@ PM> Install-Package SushiHangover.Android.Support.CustomTabs.Shared
 
 Ref: [https://www.nuget.org/packages/SushiHangover.Android.Support.CustomTabs.Shared](https://www.nuget.org/packages/SushiHangover.Android.Support.CustomTabs.Shared)
 
-###Reading Material:
+##Xamarin Linker Friendly:
+
+This library is linker friendly `[assembly:LinkerSafe]` and uses conditional preservation on members (`[Preserve(Conditional = true)]`)
+
+* [Linking on Android](https://developer.xamarin.com/search?q=linking%20on%20android)
+
+
+###CustomTabs Reading Material:
 
 ####[Chrome Custom Tabs]( https://developer.chrome.com/multidevice/android/customtabs)
 

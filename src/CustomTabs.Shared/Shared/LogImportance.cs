@@ -13,6 +13,7 @@ namespace Android.Support.CustomTabs.Shared
 		bool mPreviousServiceInUse;
 		Handler mHandler;
 
+		[Preserve(Conditional = true)]
 		public void Run()
 		{
 			if (mHandler == null)
@@ -34,6 +35,7 @@ namespace Android.Support.CustomTabs.Shared
 			//D.WriteLine("Running");
 		}
 
+		[Preserve(Conditional = true)]
 		public void Stop()
 		{
 			mHandler?.RemoveCallbacks(this);

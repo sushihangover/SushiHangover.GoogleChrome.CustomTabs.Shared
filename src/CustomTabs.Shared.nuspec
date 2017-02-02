@@ -2,10 +2,10 @@
 <package>
   <metadata>
  	<version>$version$</version>
-    <id>SushiHangover.Android.Support.CustomTabs.Shared<id>
+    <id>SushiHangover.Android.Support.CustomTabs.Shared</id>
     <title>SushiHangover.Android.Support.CustomTabs.Shared</title>
- 	<description>Xamarin.Android implementation of Chrome's CustomTabsClient Share</description>
- 	<summary>Xamarin.Android implementation of Chrome's CustomTabsClient Shared : org.chromium.customtabsclient.shared;</summary>
+ 	<description>Xamarin.Android implementation of Chrome CustomTabsClient Share</description>
+ 	<summary>Xamarin.Android implementation of Chrome CustomTabsClient Shared - org.chromium.customtabsclient.shared</summary>
     <language>en-US</language>
     <copyright>2017 - SushiHangover/RobertN</copyright>
     <authors>SushiHangover</authors>
@@ -13,9 +13,9 @@
     <iconUrl>https://raw.githubusercontent.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared/master/media/icon.gif</iconUrl>
     <licenseUrl>https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared</licenseUrl>
     <tags>Xamarin Android Chrome CustomTabs SushiHangover</tags>
-  <dependencies>
-     <dependency id="Xamarin.Android.Support.CustomTabs" />
- </dependencies>
+	<dependencies>
+		<dependency id="Xamarin.Android.Support.CustomTabs" version="24.2.1" />
+	</dependencies>
   </metadata>
   <files>
     <file src="CustomTabs.Shared/bin/Release/SushiHangover.Android.Support.CustomTabs.Shared.dll" target="lib/MonoAndroid70" />
