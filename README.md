@@ -2,8 +2,14 @@
 #SushiHangover.GoogleChrome.CustomTabs.Shared
 <img style="float: right;" src="media/icon.gif" style="width:100px">
 
-**Xamarin Android implemetation of *`Android.Support.CustomTabs.Shared`* with demos**
- 
+**`Xamarin.Android` implemetation of `Android.Support.CustomTabs.Shared` with demos**
+
+This is a `Xamarin.Android` `C#` port of the `Java` code located at [GoogleChrome/custom-tabs-client](https://github.com/GoogleChrome/custom-tabs-client)
+
+* Java-based [Application](https://github.com/GoogleChrome/custom-tabs-client/tree/master/Application) -> C#-based [Application](https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared/tree/master/src/Application)
+* Java-based [customtabsdemos](https://github.com/GoogleChrome/custom-tabs-client/tree/master/demos/src/main) -> C#-based [AndroidCustomTabs](https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared/tree/master/src/AndroidCustomTabs)
+* Java package `org.chromium.customtabsclient.shared` converted to C# Nuget in namepsace `Android.Support.CustomTabs.Shared`
+  
 ##Current project status:
 
 [![Build status](https://ci.appveyor.com/api/projects/status/t0effqwccstt7iyh/branch/master?svg=true)](https://ci.appveyor.com/api/projects/status/t0effqwccstt7iyh/branch/master?svg=true)
@@ -34,6 +40,10 @@ This library is linker friendly `[assembly:LinkerSafe]` and uses conditional pre
 
 
 ###CustomTabs Reading Material:
+
+####[Modernizing OAuth interactions in Native Apps for Better Usability and Security](https://developers.googleblog.com/2016/08/modernizing-oauth-interactions-in-native-apps.html)
+
+>On April 20, 2017, we will start blocking OAuth requests using web-views for all OAuth clients on platforms where viable alternatives exist.
 
 ####[Chrome Custom Tabs]( https://developer.chrome.com/multidevice/android/customtabs)
 
