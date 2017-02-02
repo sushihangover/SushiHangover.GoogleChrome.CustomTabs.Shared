@@ -42,12 +42,12 @@ var isRunningOnUnix = IsRunningOnUnix();
 var isRunningOnWindows = IsRunningOnWindows();
 
 var githubOwner = "sushihangover";
-var githubRepository = "Realm.Json.Extensions";
+var githubRepository = "SushiHangover.GoogleChrome.CustomTabs.Shared";
 var githubUrl = string.Format("https://github.com/{0}/{1}", githubOwner, githubRepository);
 
 var isRunningOnAppVeyor = AppVeyor.IsRunningOnAppVeyor;
 var isPullRequest = AppVeyor.Environment.PullRequest.IsPullRequest;
-var isRepository = StringComparer.OrdinalIgnoreCase.Equals("sushihangover/Realm.Json.Extensions", AppVeyor.Environment.Repository.Name);
+var isRepository = StringComparer.OrdinalIgnoreCase.Equals("sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared", AppVeyor.Environment.Repository.Name);
 
 var isReleaseBranch = StringComparer.OrdinalIgnoreCase.Equals("master", AppVeyor.Environment.Repository.Branch);
 var isTagged = AppVeyor.Environment.Repository.Tag.IsTag;
@@ -62,7 +62,7 @@ var buildVersion = gitVersion.FullBuildMetaData;
 
 // Artifacts
 var artifactDirectory = "./artifacts/";
-var packageWhitelist = new[] { "RealmJson.Extensions" };
+var packageWhitelist = new[] { "SushiHangover.GoogleChrome.CustomTabs.Shared" };
 
 // Macros
 Action Abort = () => { throw new Exception("A non-recoverable fatal error occurred."); };
@@ -85,13 +85,13 @@ Action<string, string> Package = (nuspec, basePath) =>
         Owners                   = new [] { "sushihangover" },
 
         ProjectUrl               = new Uri(githubUrl),
-        IconUrl                  = new Uri("https://raw.githubusercontent.com/sushihangover/Realm.Json.Extensions/master/media/icon.png"),
-        LicenseUrl               = new Uri("https://opensource.org/licenses/MIT"),
+        IconUrl                  = new Uri("https://raw.githubusercontent.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared/master/media/icon.png"),
+        LicenseUrl               = new Uri("https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared"),
         Copyright                = "Copyright (c) SushiHangover/RobertN",
         RequireLicenseAcceptance = false,
 
         Version                  = nugetVersion,
-        Tags                     = new [] {  "Json", "Realm", "Xamarin", "Netwonsoft", "SushiHangover" },
+        Tags                     = new [] {  "Chrome", "CustomTabs", "Xamarin", "Android", "Xamarin.Android", "SushiHangover" },
         ReleaseNotes             = new [] { string.Format("{0}/releases", githubUrl) },
 
         Symbols                  = true,
@@ -231,7 +231,7 @@ Task("Build")
         }
     };
 
-    build("RealmJsonExtensions.sln");
+    build("CustomTabsClient.sln");
 });
 
 Task("UpdateAppVeyorBuildNumber")
@@ -249,7 +249,7 @@ Task("UpdateAssemblyInfo")
     var file = "./src/CommonAssemblyInfo.cs";
 
     CreateAssemblyInfo(file, new AssemblyInfoSettings {
-        Product = "SushiHangover.RealmJson.Extensions",
+        Product = "SushiHangover.GoogleChrome.CustomTabs.Shared",
         Version = majorMinorPatch,
         FileVersion = majorMinorPatch,
         InformationalVersion = informationalVersion,
@@ -259,7 +259,7 @@ Task("UpdateAssemblyInfo")
 
 Task("RestorePackages").Does (() =>
 {
-    RestorePackages("./src/RealmJsonExtensions.sln");
+    RestorePackages("./src/CustomTabsClient.sln");
 });
 
 Task("RunUnitTests")
@@ -277,7 +277,7 @@ Task("Package")
     .IsDependentOn("RunUnitTests")
     .Does (() =>
 {
-    Package("./src/RealmJson.Extensions.nuspec", "./src");
+    Package("./src/CustomTabs.Shared.nuspec", "./src");
 });
 
 Task("PublishPackages")
