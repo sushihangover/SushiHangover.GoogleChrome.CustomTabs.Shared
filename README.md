@@ -4,22 +4,28 @@
 
 **`Xamarin.Android` implemetation of `Android.Support.CustomTabs.Shared` with demos**
 
-This is a `Xamarin.Android` `C#` port of the `Java` code located at [GoogleChrome/custom-tabs-client](https://github.com/GoogleChrome/custom-tabs-client)
+####Current project status:
+
+[![Build status](https://ci.appveyor.com/api/projects/status/t0effqwccstt7iyh/branch/master?svg=true)](https://ci.appveyor.com/api/projects/status/t0effqwccstt7iyh/branch/master?svg=true)
+
+
+This is a `Xamarin.Android` `C#` port of Google's `Java`-based `CustomTabs` code:
+
+Ref: [GoogleChrome/custom-tabs-client](https://github.com/GoogleChrome/custom-tabs-client)
 
 * Java-based [Application](https://github.com/GoogleChrome/custom-tabs-client/tree/master/Application) -> C#-based [Application](https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared/tree/master/src/Application)
 * Java-based [customtabsdemos](https://github.com/GoogleChrome/custom-tabs-client/tree/master/demos/src/main) -> C#-based [AndroidCustomTabs](https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared/tree/master/src/AndroidCustomTabs)
-* Java package `org.chromium.customtabsclient.shared` converted to 
-* C# Nuget in namepsace `Android.Support.CustomTabs.Shared`
+* Java package `org.chromium.customtabsclient.shared` converted to C# and publiched as a Nuget in namepsace `Android.Support.CustomTabs.Shared`
 
-###Using Chrome-based CustomTabs is **Easy**
+###Using Chrome-based CustomTabs is **Easy**:
 
 	var url = "https://www.xamarin.com";
 	var customTabsIntent = new CustomTabsIntent.Builder().Build();
 	CustomTabActivityHelper.OpenCustomTab(this, customTabsIntent, Uri.Parse(url), new WebviewFallback());
 
-If Chrome is not installed, you have complete control over a fallback, the above example is using a WebView-based Activity
+If Chrome is not installed, you have complete control over a fallback, the above example is using a WebView-based Activity as the fallback
 
-* **Logcat (Chrome Beta installed and being used):**
+* **Logcat output (Chrome Beta installed and being used):**
 
 <div class="nuget-badge">
 <p>
@@ -29,7 +35,7 @@ If Chrome is not installed, you have complete control over a fallback, the above
 </p>
 </div>
 
-* **Logcat (Chrome is not install, using WebView:**
+* **Logcat output (Chrome is not install, using WebView:**
 
 <div class="nuget-badge">
 <p>
@@ -40,19 +46,20 @@ If Chrome is not installed, you have complete control over a fallback, the above
 </p>
 </div>
 
+<img src="media/screen1.png" style="width:200px"><img src="media/fallback.png" style="width:200px">
 
-<img src="media/screen1.png" style="width:250px"><img src="media/fallback.png" style="width:250px">
-  
-  
-##Current project status:
+When using the `KeepAliveService` via `AddKeepAliveExtra(...), you can monitor your application's `Importance` and its elevation via `LogImportance`:
 
-[![Build status](https://ci.appveyor.com/api/projects/status/t0effqwccstt7iyh/branch/master?svg=true)](https://ci.appveyor.com/api/projects/status/t0effqwccstt7iyh/branch/master?svg=true)
+	mLogImportance = new LogImportance();
+	mLogImportance.Run();
 
-##Chrome Custom Tabs - Examples and Documentation
+Logcat output before launching a Chrome CustomTab:
 
-Re: [https://github.com/GoogleChrome/custom-tabs-client](https://github.com/GoogleChrome/custom-tabs-client)
+	[LogImportance] New importance = Foreground
 
->Chrome Custom Tabs provides a way for an application to customize and interact with a Chrome Activity on Android. This makes the web content feel like being a part of the application, while retaining the full functionality and performance of a complete web browser.
+Logcat output after launching a Chrome CustomTab:
+
+	[LogImportance] New importance = Foreground (Reason: Service in use)
 
 ##Nuget:
 
@@ -72,8 +79,16 @@ This library is linker friendly (`[assembly:LinkerSafe]`) and uses conditional p
 
 * [Linking on Android](https://developer.xamarin.com/search?q=linking%20on%20android)
 
+##Chrome Custom Tabs:
 
-###CustomTabs Reading Material:
+### Java Examples and Documentation
+
+Re: [https://github.com/GoogleChrome/custom-tabs-client](https://github.com/GoogleChrome/custom-tabs-client)
+
+>Chrome Custom Tabs provides a way for an application to customize and interact with a Chrome Activity on Android. This makes the web content feel like being a part of the application, while retaining the full functionality and performance of a complete web browser.
+
+
+###CustomTabs Reading Material
 
 ####[Modernizing OAuth interactions in Native Apps for Better Usability and Security](https://developers.googleblog.com/2016/08/modernizing-oauth-interactions-in-native-apps.html)
 

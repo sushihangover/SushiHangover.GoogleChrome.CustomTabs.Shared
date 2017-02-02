@@ -18,13 +18,13 @@ namespace Android.Support.CustomTabs.Shared
 	public class KeepAliveService : App.Service
 	{
 		const string TAG = "KeepAliveService";
-
 		IBinder binder;
+
 		[Preserve(Conditional = true)]
 		public KeepAliveService()
 		{
-			var serviceClassName = Class.FromType(typeof(KeepAliveService)).CanonicalName;
-			Log.Debug(TAG, $"{serviceClassName}");
+			//var serviceClassName = Class.FromType(typeof(KeepAliveService)).CanonicalName;
+			//Log.Debug(TAG, $"{serviceClassName}");
 		}
 
 		[Preserve(Conditional = true)]

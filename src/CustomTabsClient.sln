@@ -29,18 +29,29 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		NugetTest|Any CPU = NugetTest|Any CPU
+		NugetTest-Release|Any CPU = NugetTest-Release|Any CPU
+		NugetTest-Debug|Any CPU = NugetTest-Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E16D7125-E2B7-42BC-BBDE-22B485E06B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E16D7125-E2B7-42BC-BBDE-22B485E06B83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E16D7125-E2B7-42BC-BBDE-22B485E06B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16D7125-E2B7-42BC-BBDE-22B485E06B83}.NugetTest-Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16D7125-E2B7-42BC-BBDE-22B485E06B83}.NugetTest-Debug|Any CPU.ActiveCfg = NugetTest-Debug|Any CPU
 		{B6906BC0-F7E7-4664-8FD5-99CA913DDF15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B6906BC0-F7E7-4664-8FD5-99CA913DDF15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6906BC0-F7E7-4664-8FD5-99CA913DDF15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6906BC0-F7E7-4664-8FD5-99CA913DDF15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6906BC0-F7E7-4664-8FD5-99CA913DDF15}.NugetTest-Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6906BC0-F7E7-4664-8FD5-99CA913DDF15}.NugetTest-Debug|Any CPU.ActiveCfg = NugetTest-Debug|Any CPU
 		{C0C20D32-B6EE-4CD6-9F25-1978EA70E674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C0C20D32-B6EE-4CD6-9F25-1978EA70E674}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0C20D32-B6EE-4CD6-9F25-1978EA70E674}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C20D32-B6EE-4CD6-9F25-1978EA70E674}.NugetTest-Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C20D32-B6EE-4CD6-9F25-1978EA70E674}.NugetTest-Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C20D32-B6EE-4CD6-9F25-1978EA70E674}.NugetTest-Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C20D32-B6EE-4CD6-9F25-1978EA70E674}.NugetTest-Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E16D7125-E2B7-42BC-BBDE-22B485E06B83} = {F3ECBD6C-EE9E-418D-8C63-90B1CE2FB2DD}

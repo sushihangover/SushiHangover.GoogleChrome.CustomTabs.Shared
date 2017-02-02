@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
     <AndroidManagedSymbols>true</AndroidManagedSymbols>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'NugetTest-Debug|AnyCPU' ">
+    <Optimize>false</Optimize>
+    <OutputPath>bin\NugetTest-Debug</OutputPath>
+    <WarningLevel>4</WarningLevel>
+    <AssemblyName>Application</AssemblyName>
+    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +58,9 @@
     </Reference>
     <Reference Include="Xamarin.Android.Support.CustomTabs">
       <HintPath>..\packages\Xamarin.Android.Support.CustomTabs.25.1.0-beta2\lib\MonoAndroid70\Xamarin.Android.Support.CustomTabs.dll</HintPath>
+    </Reference>
+    <Reference Include="SushiHangover.Android.Support.CustomTabs.Shared">
+      <HintPath>..\packages\SushiHangover.Android.Support.CustomTabs.Shared.0.1.0\lib\MonoAndroid70\SushiHangover.Android.Support.CustomTabs.Shared.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -106,12 +117,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CustomTabs.Shared\CustomTabs.Shared.csproj">
-      <Project>{B6906BC0-F7E7-4664-8FD5-99CA913DDF15}</Project>
-      <Name>CustomTabs.Shared</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.1\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.1\build\Xamarin.Build.Download.targets')" />

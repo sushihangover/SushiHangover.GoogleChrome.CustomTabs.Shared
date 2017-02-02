@@ -7,7 +7,7 @@ namespace AndroidCustomTabs
 	{
 		public void OpenUri(Activity activity, Android.Net.Uri uri)
 		{
-			Intent intent = new Intent(activity, typeof(WebviewActivity));
+			var intent = new Intent(activity, typeof(WebviewActivity));
 			intent.PutExtra(WebviewActivity.EXTRA_URL, uri.ToString());
 			activity.StartActivity(intent);
 		}

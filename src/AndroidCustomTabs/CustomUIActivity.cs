@@ -41,8 +41,7 @@ namespace AndroidCustomTabs
 
 			mUrlEditText = (EditText)FindViewById(Resource.Id.url);
 			mCustomTabColorEditText = (EditText)FindViewById(Resource.Id.custom_toolbar_color);
-			mCustomTabSecondaryColorEditText =
-					(EditText)FindViewById(Resource.Id.custom_toolbar_secondary_color);
+			mCustomTabSecondaryColorEditText = (EditText)FindViewById(Resource.Id.custom_toolbar_secondary_color);
 			mShowActionButtonCheckbox = (CheckBox)FindViewById(Resource.Id.custom_show_action_button);
 			mAddMenusCheckbox = (CheckBox)FindViewById(Resource.Id.custom_add_menus);
 			mShowTitleCheckBox = (CheckBox)FindViewById(Resource.Id.show_title);
@@ -80,12 +79,12 @@ namespace AndroidCustomTabs
 
 		void OpenCustomTab()
 		{
-			string url = mUrlEditText.Text;
+			var url = mUrlEditText.Text;
 
-			int color = getColor(mCustomTabColorEditText);
-			int secondaryColor = getColor(mCustomTabSecondaryColorEditText);
+			var color = getColor(mCustomTabColorEditText);
+			var secondaryColor = getColor(mCustomTabSecondaryColorEditText);
 
-			CustomTabsIntent.Builder intentBuilder = new CustomTabsIntent.Builder();
+			var intentBuilder = new CustomTabsIntent.Builder();
 			intentBuilder.SetToolbarColor(color);
 			intentBuilder.SetSecondaryToolbarColor(secondaryColor);
 
@@ -93,17 +92,16 @@ namespace AndroidCustomTabs
 			{
 				//Generally you do not want to decode bitmaps in the UI thread. Decoding it in the
 				//UI thread to keep the example short.
-				string actionLabel = GetString(Resource.String.label_action);
-				Bitmap icon = BitmapFactory.DecodeResource(Resources, Android.Resource.Drawable.IcMenuShare);
-				PendingIntent pendingIntent =
-						CreatePendingIntent(ActionBroadcastReceiver.ACTION_ACTION_BUTTON);
+				var actionLabel = GetString(Resource.String.label_action);
+				var icon = BitmapFactory.DecodeResource(Resources, Android.Resource.Drawable.IcMenuShare);
+				var pendingIntent = CreatePendingIntent(ActionBroadcastReceiver.ACTION_ACTION_BUTTON);
 				intentBuilder.SetActionButton(icon, actionLabel, pendingIntent);
 			}
 
 			if (mAddMenusCheckbox.Checked)
 			{
-				string menuItemTitle = GetString(Resource.String.menu_item_title);
-				PendingIntent menuItemPendingIntent =
+				var menuItemTitle = GetString(Resource.String.menu_item_title);
+				var menuItemPendingIntent =
 						CreatePendingIntent(ActionBroadcastReceiver.ACTION_MENU_ITEM);
 				intentBuilder.AddMenuItem(menuItemTitle, menuItemPendingIntent);
 			}
@@ -117,9 +115,9 @@ namespace AndroidCustomTabs
 			{
 				//Generally you do not want to decode bitmaps in the UI thread. Decoding it in the
 				//UI thread to keep the example short.
-				string actionLabel = GetString(Resource.String.label_action);
-				Bitmap icon = BitmapFactory.DecodeResource(Resources, Android.Resource.Drawable.IcMenuShare);
-				PendingIntent pendingIntent = CreatePendingIntent(ActionBroadcastReceiver.ACTION_TOOLBAR);
+				var actionLabel = GetString(Resource.String.label_action);
+				var icon = BitmapFactory.DecodeResource(Resources, Android.Resource.Drawable.IcMenuShare);
+				var pendingIntent = CreatePendingIntent(ActionBroadcastReceiver.ACTION_TOOLBAR);
 				intentBuilder.AddToolbarItem(TOOLBAR_ITEM_ID, icon, actionLabel, pendingIntent);
 			}
 
