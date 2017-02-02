@@ -8,7 +8,41 @@ This is a `Xamarin.Android` `C#` port of the `Java` code located at [GoogleChrom
 
 * Java-based [Application](https://github.com/GoogleChrome/custom-tabs-client/tree/master/Application) -> C#-based [Application](https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared/tree/master/src/Application)
 * Java-based [customtabsdemos](https://github.com/GoogleChrome/custom-tabs-client/tree/master/demos/src/main) -> C#-based [AndroidCustomTabs](https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared/tree/master/src/AndroidCustomTabs)
-* Java package `org.chromium.customtabsclient.shared` converted to C# Nuget in namepsace `Android.Support.CustomTabs.Shared`
+* Java package `org.chromium.customtabsclient.shared` converted to 
+* C# Nuget in namepsace `Android.Support.CustomTabs.Shared`
+
+###Using Chrome-based CustomTabs is **Easy**
+
+	var url = "https://www.xamarin.com";
+	var customTabsIntent = new CustomTabsIntent.Builder().Build();
+	CustomTabActivityHelper.OpenCustomTab(this, customTabsIntent, Uri.Parse(url), new WebviewFallback());
+
+If Chrome is not installed, you have complete control over a fallback, the above example is using a WebView-based Activity
+
+* **Logcat (Chrome Beta installed and being used):**
+
+<div class="nuget-badge">
+<p>
+<code>
+	[CustomTabsHelper] PackageNameToUse: com.chrome.beta
+</code>
+</p>
+</div>
+
+* **Logcat (Chrome is not install, using WebView:**
+
+<div class="nuget-badge">
+<p>
+<code>
+	[CustomTabsHelper] PackageNameToUse: 
+	[WebViewFactory] Loading com.android.webview version ....
+</code>
+</p>
+</div>
+
+
+<img src="media/screen1.png" style="width:250px"><img src="media/fallback.png" style="width:250px">
+  
   
 ##Current project status:
 
@@ -34,7 +68,7 @@ Ref: [https://www.nuget.org/packages/SushiHangover.Android.Support.CustomTabs.Sh
 
 ##Xamarin Linker Friendly:
 
-This library is linker friendly `[assembly:LinkerSafe]` and uses conditional preservation on members (`[Preserve(Conditional = true)]`)
+This library is linker friendly (`[assembly:LinkerSafe]`) and uses conditional preservation on members (`[Preserve(Conditional = true)]`)
 
 * [Linking on Android](https://developer.xamarin.com/search?q=linking%20on%20android)
 
