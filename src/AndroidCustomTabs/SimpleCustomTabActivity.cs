@@ -13,7 +13,7 @@ namespace AndroidCustomTabs
 	[MetaData("android.support.PARENT_ACTIVITY", Value=".DemoListActivity")]
 	public class SimpleCustomTabActivity : AppCompatActivity, View.IOnClickListener
 	{
-		private EditText mUrlEditText;
+		EditText mUrlEditText;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -21,7 +21,6 @@ namespace AndroidCustomTabs
 			SetContentView(Resource.Layout.activity_simple_custom_tab);
 
 			FindViewById(Resource.Id.start_custom_tab).SetOnClickListener(this);
-
 			mUrlEditText = (EditText)FindViewById(Resource.Id.url);
 		}
 
@@ -34,7 +33,7 @@ namespace AndroidCustomTabs
 				case Resource.Id.start_custom_tab:
 					var url = mUrlEditText.Text;
 					var customTabsIntent = new CustomTabsIntent.Builder().Build();
-					CustomTabActivityHelper.OpenCustomTab(this, customTabsIntent, Uri.Parse(url), (CustomTabActivityHelper.ICustomTabFallback)new WebviewFallback());
+					CustomTabActivityHelper.OpenCustomTab(this, customTabsIntent, Uri.Parse(url), new WebviewFallback());
 					break;
 				default:
 					throw new Exception("Unknown View Clicked");

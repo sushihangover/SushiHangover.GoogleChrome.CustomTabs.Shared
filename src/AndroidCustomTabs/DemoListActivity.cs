@@ -10,7 +10,7 @@ using Java.Lang;
 
 namespace AndroidCustomTabs
 {
-	[Activity(Label = "DemoListActivity", Name="com.sushhangover.androidcustomtabs.DemoListActivity", MainLauncher = true, Icon = "@mipmap/ic_launcher")]
+	[Activity(Label = "DemoListActivity", Name="com.sushhangover.customtabsdemos.DemoListActivity", MainLauncher = true, Icon = "@mipmap/ic_launcher")]
 	[IntentFilter(new[] { "android.intent.action.MAIN" })]
 	public class DemoListActivity : AppCompatActivity
 	{

@@ -26,6 +26,9 @@ namespace CustomTabsClientApplication
 		
 		public static void UpdateIdValues()
 		{
+			global::Android.Support.CustomTabs.Shared.Resource.Animation.slide_in_right = global::CustomTabsClientApplication.Resource.Animation.slide_in_right;
+			global::Android.Support.CustomTabs.Shared.Resource.Animation.slide_out_left = global::CustomTabsClientApplication.Resource.Animation.slide_out_left;
+			global::Android.Support.CustomTabs.Shared.Resource.String.library_name = global::CustomTabsClientApplication.Resource.String.library_name;
 		}
 		
 		public partial class Animation
@@ -188,23 +191,26 @@ namespace CustomTabsClientApplication
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f070000
-			public const int app_name = 2131165184;
+			// aapt resource value: 0x7f070001
+			public const int app_name = 2131165185;
+			
+			// aapt resource value: 0x7f070006
+			public const int connect_button_text = 2131165190;
 			
 			// aapt resource value: 0x7f070005
-			public const int connect_button_text = 2131165189;
+			public const int launch_button_text = 2131165189;
+			
+			// aapt resource value: 0x7f070000
+			public const int library_name = 2131165184;
 			
 			// aapt resource value: 0x7f070004
-			public const int launch_button_text = 2131165188;
-			
-			// aapt resource value: 0x7f070003
-			public const int may_launch_button_text = 2131165187;
-			
-			// aapt resource value: 0x7f070001
-			public const int url_hint = 2131165185;
+			public const int may_launch_button_text = 2131165188;
 			
 			// aapt resource value: 0x7f070002
-			public const int warmup_button_text = 2131165186;
+			public const int url_hint = 2131165186;
+			
+			// aapt resource value: 0x7f070003
+			public const int warmup_button_text = 2131165187;
 			
 			static String()
 			{

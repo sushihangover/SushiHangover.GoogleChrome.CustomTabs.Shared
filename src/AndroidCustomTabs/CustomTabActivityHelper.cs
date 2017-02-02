@@ -20,7 +20,7 @@ namespace AndroidCustomTabs
 									 Uri uri,
 									 ICustomTabFallback fallback)
 		{
-			string packageName = CustomTabsHelper.GetPackageNameToUse(activity);
+			var packageName = CustomTabsHelper.GetPackageNameToUse(activity);
 
 			//If we cant find a package name, it means theres no browser that supports
 			//Chrome Custom Tabs installed. So, we fallback to the webview
@@ -80,7 +80,7 @@ namespace AndroidCustomTabs
 			if (mClient == null)
 				return false;
 
-			CustomTabsSession session = GetSession();
+			var session = GetSession();
 			if (session == null)
 				return false;
 
