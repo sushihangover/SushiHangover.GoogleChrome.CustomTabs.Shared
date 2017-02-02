@@ -62,7 +62,7 @@ var buildVersion = gitVersion.FullBuildMetaData;
 
 // Artifacts
 var artifactDirectory = "./artifacts/";
-var packageWhitelist = new[] { "SushiHangover.GoogleChrome.CustomTabs.Shared" };
+var packageWhitelist = new[] { "SushiHangover.Android.Support.CustomTabs.Shared" };
 
 // Macros
 Action Abort = () => { throw new Exception("A non-recoverable fatal error occurred."); };
