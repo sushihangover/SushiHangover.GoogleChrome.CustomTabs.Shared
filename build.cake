@@ -206,7 +206,6 @@ Task("Build")
     Action<string> build = (filename) =>
     {
         var solution = System.IO.Path.Combine("./src/", filename);
-        //var solution = filename; // System.IO.Path.Combine("./src/", filename);
 
         Information("Building {0}", solution);
 
