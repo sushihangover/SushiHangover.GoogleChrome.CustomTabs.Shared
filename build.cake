@@ -229,14 +229,14 @@ Task("Build")
             MSBuild(solution, new MSBuildSettings()
                 .SetConfiguration("Release")
                 .SetVerbosity(Verbosity.Minimal)
-            	.WithProperty("JavaSdkDirectory", new string[] { @"C:\Program Files (x86)\Java\jdk1.8.0" })
+            	.WithProperty("JavaSdkDirectory", new string[] { @"""C:\Program Files (x86)\Java\jdk1.8.0""" })
             	.WithProperty("SolutionDir", new string[] { @"./src" })
                 .SetNodeReuse(false));
         }
     };
 
-    build("CustomTabs.Shared/CustomTabs.Shared.csproj");
-    //build("CustomTabsClient.sln");
+    //build("CustomTabs.Shared/CustomTabs.Shared.csproj");
+    build("CustomTabsClient.sln");
 });
 
 Task("UpdateAppVeyorBuildNumber")
