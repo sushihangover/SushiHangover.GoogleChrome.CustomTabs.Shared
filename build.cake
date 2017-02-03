@@ -234,6 +234,7 @@ Task("Build")
         }
     };
 
+    // This fails to build on appveyor (fine on OSX)
     //build("CustomTabs.Shared/CustomTabs.Shared.csproj");
     build("CustomTabsClient.sln");
 });
