@@ -14,10 +14,10 @@
     <licenseUrl>https://github.com/sushihangover/SushiHangover.GoogleChrome.CustomTabs.Shared</licenseUrl>
     <tags>Xamarin Android Chrome CustomTabs SushiHangover</tags>
 	<dependencies>
-		<dependency id="Xamarin.Android.Support.CustomTabs" version="24.2.1" />
+		<dependency id="Xamarin.Android.Support.CustomTabs" version="25.1.0" />
 	</dependencies>
   </metadata>
   <files>
-    <file src="CustomTabs.Shared/bin/Release/SushiHangover.Android.Support.CustomTabs.Shared.dll" target="lib/MonoAndroid70" />
+    <file src="CustomTabs.Shared/bin/Release/SushiHangover.Android.Support.CustomTabs.Shared.dll" target="lib/MonoAndroid71" />
   </files>
 </package>

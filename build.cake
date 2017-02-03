@@ -186,7 +186,7 @@ Action<string, string> unitTestApp = (bundleId, appPath) =>
 
 Setup((context) =>
 {
-    Information("Building version {0} of SushiHangover.RealmJson.Extensions. (isTagged: {1})", informationalVersion, isTagged);
+    Information("Building version {0} of SushiHangover.Android.Support.CustomTabs.Sharedbuild.cake. (isTagged: {1})", informationalVersion, isTagged);
 });
 
 Teardown((context) =>
@@ -217,6 +217,7 @@ Task("Build")
                 .WithTarget("Clean");
             XBuild(solution, settings);
             settings = new XBuildSettings()
+            	.WithProperty("SolutionDir", new string[] { @"./src" })
                 .SetConfiguration("Release")
                 .SetVerbosity(Verbosity.Quiet)
                 .WithTarget("Build");
@@ -227,10 +228,13 @@ Task("Build")
             MSBuild(solution, new MSBuildSettings()
                 .SetConfiguration("Release")
                 .SetVerbosity(Verbosity.Minimal)
+            	.WithProperty("JavaSdkDirectory", new string[] { @"""C:\Program Files (x86)\Java\jdk1.8.0""" })
+            	.WithProperty("SolutionDir", new string[] { @"./src" })
                 .SetNodeReuse(false));
         }
     };
 
+    //build("CustomTabs.Shared/CustomTabs.Shared.csproj");
     build("CustomTabsClient.sln");
 });
 
