@@ -1,5 +1,6 @@
 
-#SushiHangover.GoogleChrome.CustomTabs.Shared
+#SushiHangover.Android.Support.CustomTabs.Shared
+
 <img style="float: right;" src="media/icon.gif" style="width:100px">
 
 **`Xamarin.Android` implemetation of `Android.Support.CustomTabs.Shared` with demos**
@@ -9,7 +10,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/t0effqwccstt7iyh/branch/master?svg=true)](https://ci.appveyor.com/api/projects/status/t0effqwccstt7iyh/branch/master?svg=true)
 
 
-This is a `Xamarin.Android` `C#` port of Google's `Java`-based `CustomTabs` code:
+This is a `Xamarin.Android` `C#` port of Google's `Java`-based `CustomTabs.Shared` code:
 
 Ref: [GoogleChrome/custom-tabs-client](https://github.com/GoogleChrome/custom-tabs-client)
 
@@ -40,13 +41,16 @@ If Chrome is not installed, you have complete control over a fallback, the above
 <div class="nuget-badge">
 <p>
 <code>
-	[CustomTabsHelper] PackageNameToUse: 
+	[CustomTabsHelper] PackageNameToUse:<br/>
 	[WebViewFactory] Loading com.android.webview version ....
 </code>
 </p>
 </div>
 
-<img src="media/screen1.png" style="width:200px"><img src="media/fallback.png" style="width:200px">
+###CustomTab vs WebView (via fallback):
+
+<img src="media/screen1.png" style="width:150px">
+<img src="media/fallback.png" style="width:150px">
 
 When using the `KeepAliveService` via `AddKeepAliveExtra(...), you can monitor your application's `Importance` and its elevation via `LogImportance`:
 
@@ -75,7 +79,7 @@ Ref: [https://www.nuget.org/packages/SushiHangover.Android.Support.CustomTabs.Sh
 
 ##Xamarin Linker Friendly:
 
-This library is linker friendly (`[assembly:LinkerSafe]`) and uses conditional preservation on members (`[Preserve(Conditional = true)]`)
+This library is linker friendly (`[assembly:LinkerSafe]`) and uses conditional preservation on non-static members (`[Preserve(Conditional = true)]`)
 
 * [Linking on Android](https://developer.xamarin.com/search?q=linking%20on%20android)
 
